@@ -1,7 +1,14 @@
 # Best In Place
-[![Build Status](https://secure.travis-ci.org/bernat/best_in_place.png)](http://travis-ci.org/bernat/best_in_place)
+
 **The Unobtrusive in Place editing solution**
 
+####This fork (adamark) adds one additional option,
+
+- **:model_id**: Ex:  :model_id => @user.id  
+
+Why?
+  
+  While building out a rather large rails app, we found situations where we wanted to update models in a foreign controller. After ruling out other approaches I decided we needed to be able to pass the model id through the POST request in order to find said model and update its attributes. Thanks!
 
 ##Description
 

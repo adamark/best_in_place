@@ -72,7 +72,8 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
+    # ADAM - just for testing, not so pretty..
+    @user = params[:object_id].nil? ? User.find(params[:id]) : User.find(params[:object_id])
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
